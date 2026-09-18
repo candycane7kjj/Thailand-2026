@@ -18,19 +18,20 @@ body{margin:0;background:#f8fbfa;color:var(--ink);font-family:-apple-system,Blin
 button,a{font:inherit}
 a{color:inherit}
 .hero{min-height:430px;padding:24px max(22px,calc((100vw - 1180px)/2));color:white;position:relative;overflow:hidden;background:
-linear-gradient(180deg,rgba(7,55,72,.18),rgba(7,55,72,.58)),
+linear-gradient(180deg,rgba(7,55,72,.42),rgba(7,55,72,.78)),
 radial-gradient(circle at 75% 20%,#7dd9df 0 10%,transparent 30%),
 linear-gradient(135deg,#2e9fb3,#0d617b 58%,#063e59)}
 .hero:after{content:"";position:absolute;inset:auto -10% -120px;height:260px;background:#f8fbfa;border-radius:50% 50% 0 0/45% 45% 0 0}
 .nav{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2;max-width:1180px;margin:auto}
 .logo{font-family:cursive;font-size:27px}
 .navlinks{display:flex;gap:18px;font-size:13px;overflow:auto;white-space:nowrap}
-.navlinks a{text-decoration:none;opacity:.9}
-.hero-inner{max-width:1180px;margin:75px auto 0;position:relative;z-index:2}
-.kicker{letter-spacing:3px;font-size:13px;opacity:.9}
-h1{font-family:cursive;font-size:clamp(64px,11vw,118px);line-height:.9;margin:12px 0}
-.hero-date{font-size:22px;font-weight:700}
-.route{font-size:19px;margin-top:8px}
+.navlinks a{text-decoration:none;opacity:.95}
+.hero-inner{max-width:1180px;margin:75px auto 0;position:relative;z-index:2;text-shadow:0 1px 10px rgba(0,0,0,.18)}
+.kicker{letter-spacing:3px;font-size:13px;opacity:.95center}
+h1{;font-family:cursive;font-size:clamp(64px,11vw,118px);line-height:.9;margin:12px 0}
+.hero-date{font-size:22px;font-weightbackground:700}
+.route{font-size:19px;:#dff4f5}
+margin-top:8px}
 .pill{display:inline-block;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.17);font-size:12px;margin-top:15px}
 .container{max-width:1180px;margin:auto;padding:0 20px}
 section{padding:46px 0}
@@ -43,13 +44,9 @@ h2{margin:0;font-size:28px}
 .route-card{padding:24px;min-height:260px;background:linear-gradient(145deg,#effbfa,#fff)}
 .route-line{display:flex;flex-direction:column;gap:16px;margin-top:15px}
 .stop{display:grid;grid-template-columns:36px 1fr auto;align-items:center;gap:10px}
-.dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#dff4f5}
-.stop strong{display:block}.stop small{color:var(--muted)}
+.dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:.stop strong{display:block}.stop small{color:var(--muted)}
 .arrow{color:#79aab3;font-size:12px;margin-left:14px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.stat{padding:20px;text-align:center}
-.stat b{display:block;font-size:27px}.stat span{font-size:12px;color:var(--muted)}
-.budget-card{margin-top:12px;padding:20px;display:flex;align-items:center;justify-content:space-between;background:var(--green)}
+.budget-card{margin-top:0;padding:20px;display:flex;align-items:center;justify-content:space-between;background:var(--green);border-radius:var(--radius)}
 .budget-card strong{font-size:30px}
 .tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px;position:sticky;top:0;z-index:10;background:#f8fbfa;padding-top:8px}
 .tab{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 13px;cursor:pointer;white-space:nowrap}
@@ -68,13 +65,6 @@ h2{margin:0;font-size:28px}
 .event p{margin:2px 0 0;font-size:14px}
 .mini{display:flex;flex-wrap:wrap;gap:7px}
 .mini a,.link{display:inline-flex;align-items:center;gap:4px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:6px 9px;font-size:12px;background:#fff}
-.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.place-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.place{padding:18px;min-height:120px;cursor:pointer;transition:.18s}
-.place:hover{transform:translateY(-2px)}
-.icon{font-size:24px}
-.place h3{margin:4px 0 0;font-size:16px}
-.place p{margin:2px 0;color:var(--muted);font-size:12px}
 .booking{padding:16px}
 .row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 4px;border-bottom:1px solid var(--line)}
 .row:last-child{border-bottom:0}
@@ -108,13 +98,13 @@ footer strong{font-family:cursive;font-size:30px}
 @media(max-width:800px){
  .navlinks{display:none}.hero{min-height:390px}.hero-inner{margin-top:65px}
  .overview,.section-grid,.budget-layout{grid-template-columns:1fr}
- .days{grid-template-columns:1fr}.place-grid{grid-template-columns:1fr 1fr}.hotel-grid{grid-template-columns:1fr 1fr}
- .check-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}
+ .days{grid-template-columns:1fr}.hotel-grid{grid-template-columns:1fr 1fr}
+ .check-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:480px){
  section{padding:34px 0}.container{padding:0 14px}h2{font-size:24px}
- .place-grid{grid-template-columns:1fr 1fr}.hotel-grid{grid-template-columns:1fr 1fr}.check-grid{grid-template-columns:1fr}
- .stat{padding:15px}.stat b{font-size:23px}.hero-inner{margin-top:70px}.hero-date{font-size:18px}
+ .hotel-grid{grid-template-columns:1fr 1fr}.check-grid{grid-template-columns:1fr}
+ .hero-inner{margin-top:70px}.hero-date{font-size:18px}
 }
 </style>
 </head>
@@ -123,7 +113,7 @@ footer strong{font-family:cursive;font-size:30px}
   <nav class="nav">
     <div class="logo">☼ Thailand</div>
     <div class="navlinks">
-      <a href="#days">行程</a><a href="#places">地点</a><a href="#booking">预订</a><a href="#hotels">酒店</a><a href="#budget">开销</a><a href="#prep">准备</a><a href="#blacklist">黑名单</a>
+      <a href="#days">行程</a><a href="#booking">预订</a><a href="#hotels">酒店</a><a href="#budget">开销</a><a href="#prep">准备</a><a href="#blacklist">黑名单</a>
     </div>
     <span class="pill">Travel · 2026</span>
   </nav>
@@ -147,18 +137,10 @@ footer strong{font-family:cursive;font-size:30px}
     <div class="arrow">↓ 09.30 flight</div>
     <div class="stop"><div class="dot">🌴</div><div><strong>Bangkok / Pattaya</strong><small>09.30 — 10.03 · 2 hotels</small></div><b>02</b></div>
     <div class="arrow">↓ 10.03 flight</div>
-    <div class="stop"><div class="dot">🏠</div><div><strong>Shenzhen</strong><small>Back home</small></div><b>03</b></div>
+    <div class="stop"><div class="dot">🏠</div><div；><strong>Shenzhen</strong><small>2Back home</small></div–><b>03</b></div3>
    </div>
   </div>
   <div>
-   <div class="stats">
-    <div class="card stat"><b>3</b><span>Flights ✈️</span></div>
-    <div class="card stat"><b>5</b><span>Hotels 🏨</span></div>
-    <div class="card stat"><b>10</b><span>Days 📅</span></div>
-    <div class="card stat"><b>9</b><span>Nights 🌙</span></div>
-    <div class="card stat"><b>2+</b><span>Charter / Transfer 🚕</span></div>
-    <div class="card stat"><b>¥7,000</b><span>人均目标 💰</span></div>
-   </div>
    <div class="card budget-card"><div><small>旅行总预算 · 人均</small><strong>¥7,000</strong></div><span style="font-size:42px">🌴</span></div>
   </div>
  </div>
@@ -168,18 +150,6 @@ footer strong{font-family:cursive;font-size:30px}
  <div class="section-head"><div><span class="num">02</span> <h2 style="display:inline">Daily Itinerary</h2><div class="sub">每日行程 · 点击日期筛选</div></div></div>
  <div class="tabs" id="dayTabs"></div>
  <div class="days" id="dayList"></div>
-</section>
-
-<section id="places">
- <div class="section-head"><div><span class="num">03</span> <h2 style="display:inline">Places</h2><div class="sub">地点收藏 · 点击查看</div></div></div>
- <div class="place-grid">
-  <div class="card place" data-title="美食" data-body="ครัวอ้อยใจ · Khao Soi Maesai · Pa Kiang Noodles · Jen Moy · Jasmins Cafe · King’s Gold Kitchen"><div class="icon">🍜</div><h3>美食</h3><p>泰北菜 · 冬阴功 · 咖喱面 · 烧烤</p></div>
-  <div class="card place" data-title="咖啡 & 甜品" data-body="Joost Smoothie · Sonday · Toffee Roasters · Old Soul · Cake Baan Piemsuk · Bann Bakery"><div class="icon">☕</div><h3>咖啡 & 甜品</h3><p>冰沙 · Dirty · Flat White · 椰子蛋糕</p></div>
-  <div class="card place" data-title="购物" data-body="MAYA · Warorot Market · JJ Market · Ningman One · Madam CNX · Openn Store · Buya Made It · Talon · Kaew Gallery"><div class="icon">🛍️</div><h3>购物</h3><p>本土鞋包 · 服饰 · 伴手礼 · 小东西</p></div>
-  <div class="card place" data-title="拍照" data-body="MAYU · Ping Nakara · Cape Dara · 真理寺 · Cave Beach Club · Le Charcoa（仅拍照）"><div class="icon">📷</div><h3>拍照</h3><p>酒店 · 建筑 · 海边 · 日常记录</p></div>
-  <div class="card place" data-title="按摩" data-body="清迈：行程中机动安排按摩。芭提雅：Health Land，10.02 晚上安排按摩。"><div class="icon">💆</div><h3>按摩</h3><p>机动安排 · Health Land</p></div>
-  <div class="card place" data-title="景点 & 活动" data-body="粘粘瀑布 · 大象粑粑公园 · Skyline 丛林飞跃 · 真理寺 · 格兰岛 · 99秀"><div class="icon">🌴</div><h3>景点 & 活动</h3><p>自然 · 丛林 · 海岛 · 演出</p></div>
- </div>
 </section>
 
 <section id="booking">
@@ -249,7 +219,7 @@ const days = [
 ["16:50–18:40","✈️ 香港 → 清迈"],
 ["20:00+","🏨 入住 MAYU · 要求靠泳池房"],
 ["20:00+","📱 711 买电话卡 / Grab 准备"],
-["晚上","🛍️ MAYA：负一楼吃东西、榴莲山竹、The Volcano 吐司、泰奶；1楼 KEEN；2–3楼本土鞋包"]
+["晚上","🛍️ MAYA：负一楼吃东西、榴莲山竹、The Volcano 吐司、泰奶；1楼 KEEN楼本土鞋包"]
 ],links:["电话卡攻略"]},
 {d:"09.25",w:"周五",tag:"必去",title:"💦 粘粘瀑布 + 瓦洛洛 + 莲花夜市",events:[
 ["07:30","🪞 起床 · 化妆 · 早餐"],
@@ -327,11 +297,6 @@ function renderDays(filter="all"){
 }
 renderTabs();renderDays();
 
-document.querySelectorAll(".place").forEach(p=>p.addEventListener("click",()=>{
- document.getElementById("modalTitle").textContent=p.dataset.title;
- document.getElementById("modalBody").textContent=p.dataset.body;
- document.getElementById("modal").classList.add("show");
-}));
 document.getElementById("close").onclick=()=>document.getElementById("modal").classList.remove("show");
 document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("show")});
 
