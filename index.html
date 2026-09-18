@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f7892">
+<title>Thailand 2026 · 旅行手册</title>
+<style>
+:root{
+  --ink:#173d4d; --muted:#6d858d; --sea:#16849b; --sky:#eaf7f8;
+  --cream:#fffaf2; --card:#fff; --line:#dcebed; --pink:#fff0ed;
+  --green:#e9f6ee; --yellow:#fff6df; --shadow:0 10px 30px rgba(25,80,90,.09);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f8fbfa;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Segoe UI",sans-serif;line-height:1.6}
+button,a{font:inherit}
+a{color:inherit}
+.hero{min-height:430px;padding:24px max(22px,calc((100vw - 1180px)/2));color:white;position:relative;overflow:hidden;background:
+linear-gradient(180deg,rgba(7,55,72,.18),rgba(7,55,72,.58)),
+radial-gradient(circle at 75% 20%,#7dd9df 0 10%,transparent 30%),
+linear-gradient(135deg,#2e9fb3,#0d617b 58%,#063e59)}
+.hero:after{content:"";position:absolute;inset:auto -10% -120px;height:260px;background:#f8fbfa;border-radius:50% 50% 0 0/45% 45% 0 0}
+.nav{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2;max-width:1180px;margin:auto}
+.logo{font-family:cursive;font-size:27px}
+.navlinks{display:flex;gap:18px;font-size:13px;overflow:auto;white-space:nowrap}
+.navlinks a{text-decoration:none;opacity:.9}
+.hero-inner{max-width:1180px;margin:75px auto 0;position:relative;z-index:2}
+.kicker{letter-spacing:3px;font-size:13px;opacity:.9}
+h1{font-family:cursive;font-size:clamp(64px,11vw,118px);line-height:.9;margin:12px 0}
+.hero-date{font-size:22px;font-weight:700}
+.route{font-size:19px;margin-top:8px}
+.pill{display:inline-block;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.17);font-size:12px;margin-top:15px}
+.container{max-width:1180px;margin:auto;padding:0 20px}
+section{padding:46px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:20px}
+.num{color:#73b9c4;font-size:18px;font-weight:800}
+h2{margin:0;font-size:28px}
+.sub{color:var(--muted);font-size:13px}
+.overview{display:grid;grid-template-columns:1.3fr 2fr;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.route-card{padding:24px;min-height:260px;background:linear-gradient(145deg,#effbfa,#fff)}
+.route-line{display:flex;flex-direction:column;gap:16px;margin-top:15px}
+.stop{display:grid;grid-template-columns:36px 1fr auto;align-items:center;gap:10px}
+.dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#dff4f5}
+.stop strong{display:block}.stop small{color:var(--muted)}
+.arrow{color:#79aab3;font-size:12px;margin-left:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{padding:20px;text-align:center}
+.stat b{display:block;font-size:27px}.stat span{font-size:12px;color:var(--muted)}
+.budget-card{margin-top:12px;padding:20px;display:flex;align-items:center;justify-content:space-between;background:var(--green)}
+.budget-card strong{font-size:30px}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px;position:sticky;top:0;z-index:10;background:#f8fbfa;padding-top:8px}
+.tab{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 13px;cursor:pointer;white-space:nowrap}
+.tab.active{background:var(--ink);color:white;border-color:var(--ink)}
+.days{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.day{overflow:hidden}
+.day-top{padding:17px 18px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(90deg,#effafa,#fff)}
+.day-date{font-size:12px;color:var(--sea);font-weight:800}
+.day h3{margin:3px 0 0;font-size:19px}
+.tag{font-size:11px;padding:4px 8px;border-radius:99px;background:var(--yellow);color:#8a6419}
+.day-body{padding:17px 18px}
+.timeline{border-left:2px solid #d9eeee;padding-left:17px;margin:2px 0 16px}
+.event{position:relative;margin-bottom:14px}
+.event:before{content:"";position:absolute;left:-24px;top:7px;width:9px;height:9px;border-radius:50%;background:#57aebc}
+.time{font-size:11px;color:var(--sea);font-weight:800}
+.event p{margin:2px 0 0;font-size:14px}
+.mini{display:flex;flex-wrap:wrap;gap:7px}
+.mini a,.link{display:inline-flex;align-items:center;gap:4px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:6px 9px;font-size:12px;background:#fff}
+.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.place-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.place{padding:18px;min-height:120px;cursor:pointer;transition:.18s}
+.place:hover{transform:translateY(-2px)}
+.icon{font-size:24px}
+.place h3{margin:4px 0 0;font-size:16px}
+.place p{margin:2px 0;color:var(--muted);font-size:12px}
+.booking{padding:16px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 4px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.status{font-size:11px;padding:4px 9px;border-radius:99px;background:var(--green);color:#26724a;white-space:nowrap}
+.status.todo{background:var(--yellow);color:#886516}
+.hotel-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.hotel{padding:16px}
+.hotel .photo{height:120px;border-radius:15px;margin-bottom:11px;background:linear-gradient(135deg,#91cfd1,#eaf7ef);display:grid;place-items:center;font-size:42px}
+.hotel h3{font-size:15px;margin:0}.hotel p{font-size:12px;color:var(--muted);margin:2px 0}
+.budget-layout{display:grid;grid-template-columns:1fr 2fr;gap:15px}
+.budget-total{padding:25px;background:linear-gradient(145deg,#eef8ed,#fff);display:flex;flex-direction:column;justify-content:center}
+.budget-total strong{font-size:42px}
+.money-row{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.money-row:last-child{border-bottom:0}
+.money-row span{color:var(--muted);font-size:12px}
+.check-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.check-card{padding:18px}.check-card h3{margin:0 0 8px;font-size:15px}
+.check-item{display:block;font-size:13px;margin:8px 0;color:#45616a}
+.check-item input{margin-right:8px;accent-color:var(--sea)}
+.blacklist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bad{padding:18px;background:#fff4f2;border-color:#f4d7d2}
+.bad h3{margin:0}.bad p{font-size:12px;color:#875f59;margin:5px 0}
+footer{padding:45px 20px 65px;text-align:center;background:linear-gradient(180deg,#f8fbfa,#eaf6f6)}
+footer strong{font-family:cursive;font-size:30px}
+.modal{position:fixed;inset:0;background:rgba(10,40,48,.45);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.modal.show{display:flex}
+.modal-box{background:white;width:min(680px,100%);max-height:85vh;overflow:auto;border-radius:24px 24px 0 0;padding:24px}
+.close{float:right;border:0;background:#edf5f5;border-radius:50%;width:34px;height:34px;cursor:pointer}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:#173d4d;color:white;padding:10px 16px;border-radius:99px;font-size:12px;transition:.25s;z-index:70}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:800px){
+ .navlinks{display:none}.hero{min-height:390px}.hero-inner{margin-top:65px}
+ .overview,.section-grid,.budget-layout{grid-template-columns:1fr}
+ .days{grid-template-columns:1fr}.place-grid{grid-template-columns:1fr 1fr}.hotel-grid{grid-template-columns:1fr 1fr}
+ .check-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+ section{padding:34px 0}.container{padding:0 14px}h2{font-size:24px}
+ .place-grid{grid-template-columns:1fr 1fr}.hotel-grid{grid-template-columns:1fr 1fr}.check-grid{grid-template-columns:1fr}
+ .stat{padding:15px}.stat b{font-size:23px}.hero-inner{margin-top:70px}.hero-date{font-size:18px}
+}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+  <nav class="nav">
+    <div class="logo">☼ Thailand</div>
+    <div class="navlinks">
+      <a href="#days">行程</a><a href="#places">地点</a><a href="#booking">预订</a><a href="#hotels">酒店</a><a href="#budget">开销</a><a href="#prep">准备</a><a href="#blacklist">黑名单</a>
+    </div>
+    <span class="pill">Travel · 2026</span>
+  </nav>
+  <div class="hero-inner">
+    <div class="kicker">CHIANG MAI · BANGKOK · PATTAYA</div>
+    <h1>Thailand ♡</h1>
+    <div class="hero-date">2026.09.24 — 10.03</div>
+    <div class="route">10 DAYS · 9 NIGHTS</div>
+    <div class="route">Hong Kong → Chiang Mai → Bangkok → Pattaya → Shenzhen</div>
+  </div>
+</header>
+
+<main class="container">
+<section id="overview">
+ <div class="section-head"><div><span class="num">01</span> <h2 style="display:inline">Trip Overview</h2><div class="sub">旅行概览</div></div></div>
+ <div class="overview">
+  <div class="card route-card">
+   <strong>🗺️ Route</strong>
+   <div class="route-line">
+    <div class="stop"><div class="dot">✈️</div><div><strong>Chiang Mai</strong><small>09.24 — 09.30 · 3 hotels</small></div><b>01</b></div>
+    <div class="arrow">↓ 09.30 flight</div>
+    <div class="stop"><div class="dot">🌴</div><div><strong>Bangkok / Pattaya</strong><small>09.30 — 10.03 · 2 hotels</small></div><b>02</b></div>
+    <div class="arrow">↓ 10.03 flight</div>
+    <div class="stop"><div class="dot">🏠</div><div><strong>Shenzhen</strong><small>Back home</small></div><b>03</b></div>
+   </div>
+  </div>
+  <div>
+   <div class="stats">
+    <div class="card stat"><b>3</b><span>Flights ✈️</span></div>
+    <div class="card stat"><b>5</b><span>Hotels 🏨</span></div>
+    <div class="card stat"><b>10</b><span>Days 📅</span></div>
+    <div class="card stat"><b>9</b><span>Nights 🌙</span></div>
+    <div class="card stat"><b>2+</b><span>Charter / Transfer 🚕</span></div>
+    <div class="card stat"><b>¥7,000</b><span>人均目标 💰</span></div>
+   </div>
+   <div class="card budget-card"><div><small>旅行总预算 · 人均</small><strong>¥7,000</strong></div><span style="font-size:42px">🌴</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="days">
+ <div class="section-head"><div><span class="num">02</span> <h2 style="display:inline">Daily Itinerary</h2><div class="sub">每日行程 · 点击日期筛选</div></div></div>
+ <div class="tabs" id="dayTabs"></div>
+ <div class="days" id="dayList"></div>
+</section>
+
+<section id="places">
+ <div class="section-head"><div><span class="num">03</span> <h2 style="display:inline">Places</h2><div class="sub">地点收藏 · 点击查看</div></div></div>
+ <div class="place-grid">
+  <div class="card place" data-title="美食" data-body="ครัวอ้อยใจ · Khao Soi Maesai · Pa Kiang Noodles · Jen Moy · Jasmins Cafe · King’s Gold Kitchen"><div class="icon">🍜</div><h3>美食</h3><p>泰北菜 · 冬阴功 · 咖喱面 · 烧烤</p></div>
+  <div class="card place" data-title="咖啡 & 甜品" data-body="Joost Smoothie · Sonday · Toffee Roasters · Old Soul · Cake Baan Piemsuk · Bann Bakery"><div class="icon">☕</div><h3>咖啡 & 甜品</h3><p>冰沙 · Dirty · Flat White · 椰子蛋糕</p></div>
+  <div class="card place" data-title="购物" data-body="MAYA · Warorot Market · JJ Market · Ningman One · Madam CNX · Openn Store · Buya Made It · Talon · Kaew Gallery"><div class="icon">🛍️</div><h3>购物</h3><p>本土鞋包 · 服饰 · 伴手礼 · 小东西</p></div>
+  <div class="card place" data-title="拍照" data-body="MAYU · Ping Nakara · Cape Dara · 真理寺 · Cave Beach Club · Le Charcoa（仅拍照）"><div class="icon">📷</div><h3>拍照</h3><p>酒店 · 建筑 · 海边 · 日常记录</p></div>
+  <div class="card place" data-title="按摩" data-body="清迈：行程中机动安排按摩。芭提雅：Health Land，10.02 晚上安排按摩。"><div class="icon">💆</div><h3>按摩</h3><p>机动安排 · Health Land</p></div>
+  <div class="card place" data-title="景点 & 活动" data-body="粘粘瀑布 · 大象粑粑公园 · Skyline 丛林飞跃 · 真理寺 · 格兰岛 · 99秀"><div class="icon">🌴</div><h3>景点 & 活动</h3><p>自然 · 丛林 · 海岛 · 演出</p></div>
+ </div>
+</section>
+
+<section id="booking">
+ <div class="section-head"><div><span class="num">04</span> <h2 style="display:inline">Booking & Tickets</h2><div class="sub">预订 & 服务 · 状态可点击切换</div></div></div>
+ <div class="card booking">
+  <div class="row"><div>✈️ <strong>机票</strong><small class="sub"> 3段航班</small></div><button class="status">已预订</button></div>
+  <div class="row"><div>🚕 <strong>包车 / 接送</strong><small class="sub"> 机场接送 + 清迈8小时包车</small></div><button class="status">已预订</button></div>
+  <div class="row"><div>🧗 <strong>Skyline</strong><small class="sub"> 丛林飞跃 · 09.27</small></div><button class="status todo">已预约</button></div>
+  <div class="row"><div>🌊 <strong>格兰岛</strong><small class="sub"> 10.02 · 攻略收藏</small></div><button class="status todo">待确认</button></div>
+  <div class="row"><div>📱 <strong>Grab / 电话卡</strong><small class="sub"> 绑定教程已收藏</small></div><button class="status">完成</button></div>
+ </div>
+</section>
+
+<section id="hotels">
+ <div class="section-head"><div><span class="num">05</span> <h2 style="display:inline">Hotels</h2><div class="sub">酒店 · 住店本身也是行程</div></div></div>
+ <div class="hotel-grid">
+  <div class="card hotel"><div class="photo">🏊</div><h3>MAYU</h3><p>09.24 — 09.28</p><p>清迈 · 要求靠泳池房</p></div>
+  <div class="card hotel"><div class="photo">🏛️</div><h3>Ping Nakara</h3><p>09.28 — 09.29</p><p>体验酒店 · 拍照 · 鸽子</p></div>
+  <div class="card hotel"><div class="photo">🏨</div><h3>Por Arak</h3><p>09.29 — 09.30</p><p>古城移动方便</p></div>
+  <div class="card hotel"><div class="photo">🌊</div><h3>Cape Dara</h3><p>09.30 — 10.01</p><p>芭提雅 · 享受酒店</p></div>
+  <div class="card hotel"><div class="photo">💆</div><h3>Health Land</h3><p>10.01 — 10.03</p><p>芭提雅 · 按摩</p></div>
+ </div>
+</section>
+
+<section id="budget">
+ <div class="section-head"><div><span class="num">06</span> <h2 style="display:inline">Budget</h2><div class="sub">开销 · 先记录已知项目</div></div></div>
+ <div class="budget-layout">
+  <div class="card budget-total"><span>🎒 人均目标</span><strong>¥7,000</strong><span class="sub">实际花费可继续补充</span></div>
+  <div class="card">
+   <div class="money-row"><div>✈️</div><strong>机票</strong><b>¥5,540</b></div>
+   <div class="money-row"><div>🏨</div><strong>酒店</strong><b>¥3,857</b></div>
+   <div class="money-row"><div>🚕</div><strong>机场打车</strong><b>¥230</b></div>
+   <div class="money-row"><div>🌴</div><strong>Skyline</strong><b>¥700</b></div>
+   <div class="money-row"><div>💦</div><strong>粘粘瀑布</strong><b>¥300</b></div>
+   <div class="money-row"><div>🍜</div><strong>其他餐饮 / 购物</strong><span>待记录</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="prep">
+ <div class="section-head"><div><span class="num">07</span> <h2 style="display:inline">Before You Go</h2><div class="sub">出发前 · 勾选后会保存在本机</div></div></div>
+ <div class="check-grid">
+  <div class="card check-card"><h3>📄 证件 & 文件</h3><label class="check-item"><input type="checkbox">护照</label><label class="check-item"><input type="checkbox">机票确认</label><label class="check-item"><input type="checkbox">酒店确认</label><label class="check-item"><input type="checkbox">签证 / 入境准备</label></div>
+  <div class="card check-card"><h3>📱 出行准备</h3><label class="check-item"><input type="checkbox">电话卡 / eSIM</label><label class="check-item"><input type="checkbox">Grab 绑定</label><label class="check-item"><input type="checkbox">泰铢</label><label class="check-item"><input type="checkbox">信用卡 / 现金</label></div>
+  <div class="card check-card"><h3>🧳 行李清单</h3><label class="check-item"><input type="checkbox">防晒</label><label class="check-item"><input type="checkbox">驱蚊</label><label class="check-item"><input type="checkbox">晕车药</label><label class="check-item"><input type="checkbox">充电宝 / 转换插头</label></div>
+  <div class="card check-card"><h3>🔗 攻略链接</h3><label class="check-item"><input type="checkbox">电话卡攻略</label><label class="check-item"><input type="checkbox">Grab 绑定教程</label><label class="check-item"><input type="checkbox">包车攻略</label><label class="check-item"><input type="checkbox">格兰岛攻略</label></div>
+ </div>
+</section>
+
+<section id="blacklist">
+ <div class="section-head"><div><span class="num">08</span> <h2 style="display:inline">Blacklist</h2><div class="sub">踩雷记录 · 给未来的自己</div></div></div>
+ <div class="blacklist">
+  <div class="card bad"><h3>🚫 Akira Temple</h3><p>服务差 · 水压有问题</p></div>
+  <div class="card bad"><h3>🚫 Le Charcoa</h3><p>房间小 · 卫生一般</p><p>⚠️ 如果只是拍照，可以去</p></div>
+ </div>
+</section>
+</main>
+
+<footer><strong>Have a nice trip ♡</strong><div class="sub">THAILAND 2026　|　Chiang Mai · Bangkok · Pattaya　|　09.24 — 10.03</div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><h2 id="modalTitle"></h2><p id="modalBody" style="white-space:pre-line"></p></div></div>
+<div class="toast" id="toast">已保存 ✓</div>
+
+<script>
+const days = [
+{d:"09.24",w:"周四",tag:"抵达清迈",title:"MAYU 酒店周边",events:[
+["16:50–18:40","✈️ 香港 → 清迈"],
+["20:00+","🏨 入住 MAYU · 要求靠泳池房"],
+["20:00+","📱 711 买电话卡 / Grab 准备"],
+["晚上","🛍️ MAYA：负一楼吃东西、榴莲山竹、The Volcano 吐司、泰奶；1楼 KEEN；2–3楼本土鞋包"]
+],links:["电话卡攻略"]},
+{d:"09.25",w:"周五",tag:"必去",title:"💦 粘粘瀑布 + 瓦洛洛 + 莲花夜市",events:[
+["07:30","🪞 起床 · 化妆 · 早餐"],
+["08:30","🚗 MAYU 出发"],
+["09:30–11:30","💦 粘粘瀑布"],
+["12:00–13:00","🐘 大象粑粑公园"],
+["14:00–15:00","🛏️ 酒店休整"],
+["15:30","🛍️ 瓦洛洛：Joost / Sonday / Toffee / 伴手礼 / 市集"],
+["晚上","🌙 Lotus's Night Market"]
+],links:["包车攻略","泰奶攻略","冬阴功盖饭"]},
+{d:"09.26",w:"周六",tag:"逛市集",title:"JJ Market + 雨林市集 + 椰子市集",events:[
+["上午","🚶 Pa Kiang Noodles / Khao Soi Maesai"],
+["09:00","🥥 椰子市集"],
+["12:00","🛍️ JJ Market"],
+["15:00","🌿 雨林市集"],
+["下午","🏨 回酒店放东西"],
+["晚上","🍲 泰北火锅 · 按摩"]
+],links:["瓦罐小火锅","泰奶攻略"]},
+{d:"09.27",w:"周日",tag:"已预约",title:"🌳 Skyline 丛林飞跃 + 宁曼 + 周日夜市",events:[
+["06:00","🌅 起床 · 早餐 · 晕车药"],
+["07:00–07:30","🧗 Skyline 丛林飞跃接送"],
+["15:00+","🏨 回 MAYU"],
+["下午","🛍️ 宁曼一号 · 猫猫符 · King's Gold Kitchen"],
+["晚上","🌙 周日夜市"]
+],links:["Skyline 套餐","生腌虾"]},
+{d:"09.28",w:"周一",tag:"机动",title:"💆 换酒店 · Ping Nakara",events:[
+["上午","🏨 搬去 Ping Nakara"],
+["白天","💇 洗头 · 酒店体验 · 拍照 · 鸽子"],
+["下午","☕ 河边咖啡馆发呆"],
+["可选","☕ Old Soul / 椰子蛋糕 Cake Baan Piemsuk"],
+["晚上","🍖 Frog Eye 烤排骨 / Bann Bakery"]
+],links:["Old Soul","Bann Bakery"]},
+{d:"09.29",w:"周二",tag:"古城",title:"🏯 Por Arak + 古城",events:[
+["上午","🏨 搬去 Por Arak"],
+["白天","🛍️ 古城伴手礼 · Buya Made It · Talon · Kaew Gallery · Mintnimal"],
+["下午","📷 Le Charcoa 拍照 · 333射击"],
+["傍晚","👘 泰服体验"],
+["晚上","🏯 契迪龙寺 & 罗摩利寺 · 泰式按摩 · Jen Moy 烧烤"]
+],links:["寺庙攻略"]},
+{d:"09.30",w:"周三",tag:"飞曼谷",title:"✈️ 清迈 → 曼谷 → 芭提雅",events:[
+["07:30","🚕 酒店 → 清迈机场"],
+["09:35–10:55","✈️ 清迈 → 曼谷"],
+["抵达后","🚗 已预约接机 → 酒店"],
+["下午","🏨 Cape Dara · 享受酒店"],
+["晚上","🔥 99秀 ❤️‍🔥"]
+]},
+{d:"10.01",w:"周四",tag:"机动",title:"🌴 芭提雅 · 酒店 + 真理寺",events:[
+["上午","📷 Cape Dara 酒店拍拍拍"],
+["退房后","🚕 打车去午饭 · Jasmins Cafe"],
+["下午","🏨 换酒店入住 Health Land · 提前预约第二晚按摩"],
+["傍晚","🏯 真理寺"],
+["晚上","🌊 Cave Beach Club 晚饭"]
+],links:["Cave Beach Club"]},
+{d:"10.02",w:"周五",tag:"海岛",title:"🌊 格兰岛",events:[
+["白天","🏝️ 格兰岛一日游"],
+["晚上","💆 回酒店按摩"]
+],links:["格兰岛攻略 1","格兰岛攻略 2"]},
+{d:"10.03",w:"周六",tag:"回国",title:"✈️ 曼谷 → 深圳",events:[
+["12:30","🚕 离开酒店"],
+["17:25–22:05","✈️ 曼谷 → 深圳"],
+["晚上","🏠 到家"]
+]}
+];
+const tabs=document.getElementById("dayTabs"), list=document.getElementById("dayList");
+function renderTabs(){
+ tabs.innerHTML='<button class="tab active" data-i="all">全部</button>'+days.map((x,i)=>`<button class="tab" data-i="${i}">${x.d}</button>`).join("");
+ tabs.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{tabs.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderDays(b.dataset.i)});
+}
+function renderDays(filter="all"){
+ const arr=filter==="all"?days:[days[+filter]];
+ list.innerHTML=arr.map((x,idx)=>`<article class="card day">
+ <div class="day-top"><div><div class="day-date">${x.d}　${x.w}</div><h3>${x.title}</h3></div><span class="tag">${x.tag}</span></div>
+ <div class="day-body"><div class="timeline">${x.events.map(e=>`<div class="event"><div class="time">${e[0]}</div><p>${e[1]}</p></div>`).join("")}</div>
+ <div class="mini">${(x.links||[]).map(l=>`<a href="#" onclick="showLink(event,'${l.replace(/'/g,"\\'")}')">🔗 ${l}</a>`).join("")}</div></div></article>`).join("");
+}
+renderTabs();renderDays();
+
+document.querySelectorAll(".place").forEach(p=>p.addEventListener("click",()=>{
+ document.getElementById("modalTitle").textContent=p.dataset.title;
+ document.getElementById("modalBody").textContent=p.dataset.body;
+ document.getElementById("modal").classList.add("show");
+}));
+document.getElementById("close").onclick=()=>document.getElementById("modal").classList.remove("show");
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("show")});
+
+function showLink(e,name){
+ e.preventDefault();
+ const known={
+ "电话卡攻略":"https://xhslink.cn/o/5YEGJ6pfIPC",
+ "Grab 绑定教程":"https://xhslink.cn/o/qluVjQHIVU",
+ "包车攻略":"https://xhslink.cn/o/1RqlDAF14mP",
+ "Skyline 套餐":"https://xhslink.cn/o/5Ir6A7XMGuR",
+ "生腌虾":"https://xhslink.com/o/4FUxAWKwQFr",
+ "Cave Beach Club":"https://xhslink.com/o/8VsK2s0bRIS",
+ "格兰岛攻略 1":"https://xhslink.com/o/27mHufQq3ar",
+ "格兰岛攻略 2":"https://xhslink.com/o/AZAtv7CMTPX",
+ "Old Soul":"http://xhslink.com/o/7Vvrur8NYuD",
+ "Bann Bakery":"https://xhslink.cn/o/20qZkCXdz7t",
+ "泰奶攻略":"http://xhslink.com/o/66WiLVm96s8",
+ "冬阴功盖饭":"http://xhslink.com/o/4xb2Z7au57",
+ "瓦罐小火锅":"http://xhslink.com/o/71e6qtge6rR",
+ "寺庙攻略":"http://xhslink.com/o/9y2GABI4Rrp"
+ };
+ if(known[name]) location.href=known[name];
+ else {document.getElementById("toast").textContent="这里先做成占位链接，之后可以继续补充 ↗";document.getElementById("toast").classList.add("show");setTimeout(()=>document.getElementById("toast").classList.remove("show"),2200)}
+}
+document.querySelectorAll('input[type="checkbox"]').forEach((el,i)=>{
+ const key="thai-check-"+i; el.checked=localStorage.getItem(key)==="1";
+ el.onchange=()=>{localStorage.setItem(key,el.checked?"1":"0");const t=document.getElementById("toast");t.textContent="已保存 ✓";t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1200)}
+});
+</script>
+</body>
+</html>
