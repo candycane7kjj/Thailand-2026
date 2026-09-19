@@ -2,17 +2,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Thailand · 2026</title>
 <style>
-:root{--bg:#fcfcf5;--blue:#4993c5;--light:#8abdd2;--text:#234354;--muted:#71848d}
+:root{--bg:#fcfcf5;--blue:#dceff6;--light:#8abdd2;--text:#234354;--muted:#71848d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",Arial,sans-serif}
-.header{position:sticky;top:0;z-index:20;background:rgba(252,252,245,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e8eff1}
+.hero{height:270px;position:relative;overflow:hidden;color:#fff;background:#6fa8bd url("hero-sea.jpg") center/cover no-repeat}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,61,75,.18),rgba(20,61,75,.58))}.hero-in{position:relative;z-index:1;max-width:760px;height:100%;margin:auto;padding:24px 18px 28px;display:flex;flex-direction:column;justify-content:flex-end}.hero-kicker{font-size:12px;font-weight:800;letter-spacing:1.2px;opacity:.9}.hero h1{font-size:52px;line-height:.95;margin:7px 0 10px;letter-spacing:-2px}.hero p{margin:3px 0;font-size:13px;font-weight:700;opacity:.94}.header{position:sticky;top:0;z-index:20;background:rgba(252,252,245,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e8eff1}
 .header-in{max-width:760px;margin:auto;height:62px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{font-size:15px;font-weight:850;white-space:nowrap}.nav{display:flex;gap:14px;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{font-size:12px;font-weight:800;color:#617780;text-decoration:none;white-space:nowrap}
 main{max-width:760px;margin:auto;padding:26px 15px 42px}.label{margin:0 0 13px 3px;color:#337eae;font-size:14px;font-weight:850}
-.card{background:var(--blue);color:#fff;border-radius:28px;padding:21px 18px 23px;box-shadow:0 14px 34px #4993c52c}
-.meta{font-size:12px;font-weight:850;opacity:.86;letter-spacing:.3px}.date{font-size:28px;font-weight:900;line-height:1.15;margin-top:5px}.week{font-size:13px;opacity:.9;margin-top:3px}
-.title{font-size:20px;font-weight:900;line-height:1.35;margin-top:17px}.sub{font-size:12px;opacity:.85;margin-top:3px}
+.card{background:var(--blue);color:#294b5b;border-radius:28px;padding:21px 18px 23px;box-shadow:0 12px 30px #4993c520}
+.meta{font-size:12px;font-weight:850;color:#337eae;letter-spacing:.3px}.date{font-size:28px;font-weight:900;line-height:1.15;margin-top:5px}.week{font-size:13px;opacity:.9;margin-top:3px}
+.title{font-size:20px;font-weight:900;line-height:1.35;margin-top:17px}.sub{font-size:12px;color:#66808b;margin-top:3px}
 .events{margin-top:20px}.event{display:grid;grid-template-columns:74px 1fr;gap:10px;padding:10px 0;border-top:1px solid #ffffff38}
-.event:first-child{border-top:0;padding-top:0}.event time{font-size:11px;font-weight:850;white-space:nowrap;opacity:.9}.event-body{font-size:14px;line-height:1.6}.event-body a{color:#fff;text-decoration:none;font-weight:850;border-bottom:1px solid #ffffff70}
+.event:first-child{border-top:0;padding-top:0}.event time{font-size:11px;font-weight:850;white-space:nowrap;color:#337eae}.event-body{font-size:14px;line-height:1.6}.event-body a{color:#337eae;text-decoration:none;font-weight:850;border-bottom:1px solid #8abdd280}
 .daytabs{display:flex;gap:5px;overflow:auto;margin:14px 0 0;scrollbar-width:none}.daytabs::-webkit-scrollbar{display:none}
 .daytab{border:0;background:transparent;color:#819198;font-size:11px;font-weight:850;padding:7px 9px;white-space:nowrap}.daytab.active{color:#337eae}
 .features{margin-top:32px}.featuretabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #d8e7ec}
@@ -21,17 +21,18 @@ main{max-width:760px;margin:auto;padding:26px 15px 42px}.label{margin:0 0 13px 3
 .hotels{margin-top:32px}.hotel-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hotel{background:#fff;border:1px solid #e1ebee;border-radius:17px;overflow:hidden}.hotel img{width:100%;height:120px;object-fit:cover;display:block}.hbody{padding:10px 11px 12px}.hbody h3{font-size:15px;margin:4px 0;color:#337eae}.hbody h3 a{text-decoration:none}.hbody small,.dates{font-size:10px;color:var(--muted);line-height:1.5}.hbody small a{color:#337eae;text-decoration:none;font-weight:750}
 footer{text-align:center;color:#9aa8ad;font-size:10px;padding:22px 0}
 @media(max-width:520px){.header-in{padding:0 13px}.brand{font-size:14px}.nav{gap:10px}.nav a{font-size:11px}main{padding:23px 13px 38px}.card{border-radius:25px;padding:20px 16px 22px}.event{grid-template-columns:66px 1fr}.hotel-grid{grid-template-columns:1fr 1fr}}
-</style></head><body>
+.info-section{margin-top:34px}.info-card{background:#fff;border:1px solid #e0ebef;border-radius:20px;overflow:hidden}.info-row{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:13px 14px;border-bottom:1px solid #edf2f3;font-size:13px;line-height:1.5}.info-row:last-child{border-bottom:0}.info-row b{color:#337eae}.checks{padding:6px 14px}.checks label{display:block;padding:11px 0;border-bottom:1px solid #edf2f3;font-size:13px}.checks label:last-child{border-bottom:0}.checks input{accent-color:#4993c5;margin-right:7px}</style></head><body>
+<section class="hero"><div class="hero-in"><div class="hero-kicker">THAILAND · PRIVATE TRIP</div><h1>Thailand</h1><p>2026.09.24 — 10.03</p><p>Chiang Mai → Bangkok → Pattaya</p></div></section>
 <header class="header"><div class="header-in"><div class="brand">Thailand · 2026</div><nav class="nav">
-<a href="#flights">航班</a><a href="#hotels">酒店</a><a href="#itinerary">行程</a><a href="#budget">预算</a><a href="#todo">Todo</a>
+<a href="#flights">航班</a><a href="#itinerary">行程</a><a href="#hotels">酒店</a><a href="#budget">预算</a><a href="#todo">Todo</a>
 </nav></div></header>
 <main>
+<section class="info-section" id="flights"><div class="label">航班</div><div class="info-card"><div class="info-row"><b>09.24</b><span>16:50–18:40　香港 HKG → 清迈 CNX · UO744</span></div><div class="info-row"><b>09.30</b><span>09:35–10:55　清迈 CNX → 曼谷 BKK · VZ115</span></div><div class="info-row"><b>10.03</b><span>17:25–22:05　曼谷 BKK → 深圳 SZX · CZ8324</span></div></div></section>
 <section id="itinerary"><div class="label">行程</div><div id="day"></div><div class="daytabs" id="daytabs"></div></section>
-<section class="features"><div class="featuretabs">
-<button class="ft active" data-key="food">美食</button><button class="ft" data-key="shopping">购物</button><button class="ft" data-key="other">其他</button>
-</div><div id="feature"></div></section>
 <section class="hotels" id="hotels"><div class="label">酒店</div><div class="hotel-grid"><div class="hotel"><img src="mayu.jpg"/><div class="hbody"><div class="dates">09.24–09.28 · 清迈</div><h3><a href="http://xhslink.com/o/9arlO9qZ0oZ" rel="noopener" target="_blank">Mayu</a></h3><small>要求靠泳池房间 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Mayu+Chiang+Mai" rel="noopener" target="_blank">Google Maps</a></small></div></div><div class="hotel"><img src="ping-nakara.jpg"/><div class="hbody"><div class="dates">09.28–09.29 · 清迈</div><h3><a href="http://xhslink.com/o/4YoB1Z6kNE7" rel="noopener" target="_blank">Ping Nakara</a></h3><small>酒店体验 · 拍照 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Ping+Nakara+Boutique+Hotel+Chiang+Mai" rel="noopener" target="_blank">Google Maps</a></small></div></div><div class="hotel"><img src="por-arak.jpg"/><div class="hbody"><div class="dates">09.29–09.30 · 清迈</div><h3><a href="http://xhslink.com/o/1Wu9MAnsv53" rel="noopener" target="_blank">Por Arak</a></h3><small>古城移动方便 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Por+Arak+Chiang+Mai" rel="noopener" target="_blank">Google Maps</a></small></div></div><div class="hotel"><img src="cape-dara.jpg"/><div class="hbody"><div class="dates">09.30–10.01 · 芭提雅</div><h3><a href="http://xhslink.com/o/4ZQXAU6fcsZ" rel="noopener" target="_blank">Cape Dara</a></h3><small>享受酒店 · 99秀 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cape+Dara+Resort+Pattaya" rel="noopener" target="_blank">Google Maps</a></small></div></div><div class="hotel"><img src="health-land.jpg"/><div class="hbody"><div class="dates">10.01–10.03 · 芭提雅</div><h3><a href="http://xhslink.com/o/6EuuwQWS6CR" rel="noopener" target="_blank">Health Land</a></h3><small>按摩 · <a class="maplink" href="http://xhslink.com/o/27mHufQq3ar" rel="noopener" target="_blank"><span>格兰岛</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Health+Land+Pattaya" rel="noopener" target="_blank">Google Maps</a></small></div></div></div></section>
-<div id="flights"></div><div id="budget"></div><div id="todo"></div>
+
+
+<section class="info-section" id="budget"><div class="label">预算</div><div class="info-card"><div class="info-row"><b>机票</b><span>人均 ¥2,770</span></div><div class="info-row"><b>酒店</b><span>每晚约 ¥429</span></div><div class="info-row"><b>机酒</b><span>约 ¥9,400</span></div></div></section><section class="info-section" id="todo"><div class="label">Todo</div><div class="info-card checks"><label><input type="checkbox"> 护照 / 机票确认</label><label><input type="checkbox"> 酒店确认</label><label><input type="checkbox"> 电话卡 / eSIM</label><label><input type="checkbox"> Grab 绑定</label><label><input type="checkbox"> 防晒 / 驱蚊</label><label><input type="checkbox"> 充电 / 转换插头</label><label><input type="checkbox"> 10.01 第二晚按摩预约</label></div></section>
 <footer>THAILAND · 09.24 — 10.03</footer>
 </main>
 <script>
@@ -74,4 +75,5 @@ shopping:["MAYA：KEEN、本土鞋包","瓦洛洛：Madam CNX、Openn Store、Ak
 other:["包车 8 小时约 ฿1,500","Skyline 丛林飞跃已预约","09.30 携程接机已预约","10.01 第二晚按摩提前预约","Grab 绑定 · 电话卡等出发前准备"]};
 function render(k){document.getElementById('feature').innerHTML='<div class="feature-list">'+data[k].map(x=>'<div class="feature-item">'+x+'</div>').join('')+'</div>'}
 document.querySelectorAll('.ft').forEach(b=>b.onclick=()=>{document.querySelectorAll('.ft').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.key)});render('food');
-</script></body></html>
+
+const navLinks=document.querySelectorAll('.nav a');const sections=['flights','hotels','itinerary','budget','todo'].map(id=>document.getElementById(id));window.addEventListener('scroll',()=>{let y=window.scrollY+90,idx=0;sections.forEach((el,i)=>{if(el&&el.offsetTop<=y)idx=i});navLinks.forEach((a,i)=>a.classList.toggle('active',i===idx))},{passive:true});</script></body></html>
